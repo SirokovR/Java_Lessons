@@ -55,6 +55,7 @@ public class Main {
     }
 
 
+    ///  Метод для полученияя рандомных значений в задаваемом интервале
     public static int getRandomFromRange(int from, int to){
          return (int)(Math.random()*(to-from)+from);
     }

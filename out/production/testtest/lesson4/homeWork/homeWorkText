@@ -1,0 +1,18 @@
+1. Read: Ekkel_RUS: 70-85
+
+
+2. Sozdaite Class Car u kotorogo budet cena, god vypuska, ves, cvet, proizvoditel
+(randomno iz: BMW, Toyota, Honda, Kia, VW);
+- u Classa doljen byt konstructor na vse parametry;
+- v main sozdaite 5-6 objectov classa Car, soberite ih v massiv;
+- raspecataite vsjy informacijy (cena, god vypuska, ves, cvet,
+ proizvoditel) dlja samogo dorogogo avtomobilja;
+- raspecataite vsjy informacijy (cena, god vypuska, ves,
+cvet, proizvoditel) dlja samogo starogo avtomobilja;
+
+
+3. Перемножить две матрицы (матрицы, а не массивы) размерностью 5х5, заполненные случайными числами от 9 до 15.
+
+
+https://www.mathsisfun.com/algebra/matrix-multiplying.html#:~:text=Rows%20and%20Columns
+,-To%20show%20how&text=When%20we%20do%20multiplication%3A,columns%20as%20the%202nd%20matrix.

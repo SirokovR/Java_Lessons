@@ -5,13 +5,18 @@ public class Main {
 
         findMaxValue(333, 8);     // 1 Task
 
-        printIncreasingSequence(344, 6, 888); // 2 Task
+        printIncreasingSequence(7, 17, 27); // 2 Task
+        printIncreasingSequence1(7,17,27); // 2 Task Math.max() Math.min()
+        printIncreaseSequenceMyRealisation(7,17,27); // 2 Task getMax() getMin() My Realisation
 
 
-        printDecreasingSequence(33, 5, 88);  // 3 Task
+        printDecreasingSequence(7, 17, 27);  // 3 Task
+        printDecreasingSequence1(7, 17, 27); //  3 Task Math.max() Math.min()
+
 
         boolean result = isBelongsToInterval(30, 20, 30); // 4 Task
         System.out.println(result);
+
 
         isEntryPossibilities(18);   // 5 Task
 
@@ -64,6 +69,13 @@ public class Main {
 
     }
 
+    public static void printIncreasingSequence1(int a, int b, int c){
+        int max = Math.max(a, Math.max(b, c));
+        int min = Math.min(a, Math.min(b, c));
+        int middle = a + b + c -min - max;
+        System.out.println(min + " " + middle + " " + max);
+    }
+
 
     public static void printDecreasingSequence(int a, int b, int c) {
         int max, min, middle;
@@ -100,6 +112,14 @@ public class Main {
     }
 
 
+    public static void printDecreasingSequence1(int a, int b, int c){
+        int max = Math.max(a, Math.max(b, c));
+        int min = Math.min(a, Math.min(b, c));
+        int middle = a + b + c -min - max;
+        System.out.println(max + " " + middle + " " + min);
+    }
+
+
     public static boolean isBelongsToInterval(int verifiableNumber, int startInterval, int stopInterval) {
         return (startInterval <= verifiableNumber) & (verifiableNumber < stopInterval);
     }
@@ -128,5 +148,33 @@ public class Main {
         }
     }
 
+
+    public static int getMax1(int a, int b) {
+        if( a > b){
+            return a;
+        } else {
+            return b;
+        }
+
+    }
+
+    public static int getMin1(int a, int b) {
+        if( a < b){
+            return a;
+        } else {
+            return b;
+        }
+
+    }
+
+
+    public static  void printIncreaseSequenceMyRealisation(int a, int b, int c){
+        int min = getMin1(a, getMin1(b, c));
+        int max = getMax1(a, getMax1(b, c));
+        int mid = a + b + c - min - max;
+
+        System.out.println(min + " " + mid + " " + max);
+
+    }
 
 }

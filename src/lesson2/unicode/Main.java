@@ -1,4 +1,4 @@
-package lesson2.test;
+package lesson2.unicode;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,5 +15,12 @@ public class Main {
         System.out.println(g * 0);   //  \u000d System.out.println("NaN") ;
 
 
+
+
     }
-}
+
+
+
+
+    }
+
