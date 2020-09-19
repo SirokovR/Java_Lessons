@@ -20,3 +20,6 @@
 6. *. В три переменные a, b и c записаны три вещественных числа(parametry metoda).
 Создать метод, которая будет находить и выводить на экран вещественные корни квадратного уравнения ax²+bx+c=0,
 либо сообщать, что корней нет. (https://www.mathsisfun.com/algebra/quadratic-equation.html posmotret Summary)
+
+
+//init

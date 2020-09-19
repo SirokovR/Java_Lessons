@@ -58,3 +58,6 @@ public class BitRealisation {
         System.out.println(min + " " + mid + " " + max);
     }
 }
+
+
+//init
