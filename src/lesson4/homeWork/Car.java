@@ -36,7 +36,7 @@ public class Car {
             }
 
         }
-        System.out.format("The most expensive car have # Price: "+ expensive.price +"   Year:" + expensive.year +"  Weight:"+expensive.weight + "  Color:"+ expensive.color + "  Producer:"+expensive.producer);
+        System.out.format("The most expensive car have # Price: "+ expensive.price +"   Year:" + expensive.year +"  Weight:"+expensive.weight + "  ColorsSet:"+ expensive.color + "  Producer:"+expensive.producer);
 
     }
 
@@ -49,7 +49,7 @@ public class Car {
 
             }
         }
-        System.out.println("The oldest car have # Price: "+ oldest.price +"   Year:" + oldest.year +"  Weight:"+oldest.weight + "  Color:"+ oldest.color + "  Producer:"+oldest.producer);
+        System.out.println("The oldest car have # Price: "+ oldest.price +"   Year:" + oldest.year +"  Weight:"+oldest.weight + "  ColorsSet:"+ oldest.color + "  Producer:"+oldest.producer);
     }
 
 

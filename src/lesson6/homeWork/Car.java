@@ -1,20 +1,23 @@
 package lesson6.homeWork;
 
+import java.util.Calendar;
+
 public class Car {
-    public static final String RED = "RED";
-    public static final String WHITE = "WHITE";
-    public static final String BLACK = "BLACK";
+    protected enum ColorSet { RED, WHITE, BLACK}
 
     private int weight;
     private int price;
-    private String color;
 
-    public Car(int weight, int price, String color) {
+    private ColorSet color;
+
+
+    public Car(int weight, int price, ColorSet color ) {
         checkWeight(weight);
         checkPrice(price);
         this.weight = weight;
         this.price = price;
         this.color = color;
+
     }
 
 
@@ -57,7 +60,11 @@ public class Car {
         this.price = price;
     }
 
-    public String getColor() { return color;}
+    public ColorSet getColor() {
+        return color;
+    }
 
-    public void setColor(String color) {this.color = color;}
+    public void setColor(ColorSet color) {
+        this.color = color;
+    }
 }
