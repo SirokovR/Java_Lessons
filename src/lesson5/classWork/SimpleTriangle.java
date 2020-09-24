@@ -1,6 +1,8 @@
 package lesson5.classWork;
 
-public class SimpleTriangle {
+import lesson7.classWork.Figure;
+
+public class SimpleTriangle extends Figure {
     private int a;
     private int b;
     private int c;
