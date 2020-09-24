@@ -1,10 +1,27 @@
 package lesson6.homeWork;
 
+import lesson6.homeWork.service.Warehouse;
+
+import static lesson6.homeWork.Car.MAX_PRICE;
+
 public class Main {
     public static void main(String[] args) {
-        Car test1 = new Car(1800,333_000,"Blue");
-        System.out.println(test1.getWeight());
-        System.out.println(test1.getColor());
-        System.out.println(test1.getPrice());
+        Warehouse warehouse = new Warehouse(600000);
+        warehouse.buyCar(new Car());
+        warehouse.buyCar(new Car());
+        warehouse.buyCar(new Car());
+        warehouse.printReport();
+        System.out.println("");
+
+        warehouse.sellCarByIndex(0);
+        warehouse.printReport();
+        System.out.println("");
+        warehouse.sellCarByIndex(2);
+        warehouse.printReport();
+
+
+
+        warehouse.getParkingList();
+
     }
 }

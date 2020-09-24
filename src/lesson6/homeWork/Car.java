@@ -1,47 +1,49 @@
 package lesson6.homeWork;
 
-import java.util.Calendar;
+import static utilities.RandomUtils.getRandomFromRange;
 
 public class Car {
-    protected enum ColorSet { RED, WHITE, BLACK}
 
+
+    public static final int MIN_PRICE = 80000;
+    public static final int MAX_PRICE = 400000;
+    public static final int MIN_WEIGHT = 1200;
+    public static final int MAX_WEIGHT = 2500;
     private int weight;
     private int price;
+    private Manufacturer manufacturer;
+    private Color color;
 
-    private ColorSet color;
+    public Car() {
+        this(
+                getRandomFromRange(MIN_WEIGHT, MAX_WEIGHT),
+                getRandomFromRange(MIN_PRICE, MAX_PRICE),
+                Manufacturer.values()[getRandomFromRange(0, Manufacturer.values().length - 1)],
+                Color.values()[getRandomFromRange(0, Color.values().length - 1)]
 
+        );
+    }
 
-    public Car(int weight, int price, ColorSet color ) {
-        checkWeight(weight);
+    public Car(int weight, int price, Manufacturer manufacturer, Color color) {
         checkPrice(price);
+        checkWeight(weight);
         this.weight = weight;
         this.price = price;
         this.color = color;
-
+        this.manufacturer = manufacturer;
     }
 
-
-
-    public int checkWeight(int weight){
-        boolean acceptableWeight = (1200>= weight && weight <= 2500);
-        if(acceptableWeight){
-            throw new IllegalArgumentException("Weight should be in the range: 1200-2500");
+    private void checkPrice(int price) {
+        if (price < MIN_PRICE && price > MAX_PRICE) {
+            throw new RuntimeException("Price is invalid");
         }
-        return weight;
     }
 
-
-    public int checkPrice(int price){
-        boolean acceptablePrice = (80_000>= price && price <= 400_000);
-        if (acceptablePrice){
-            throw new IllegalArgumentException("Price should be in range: 80_000 - 400_000");
+    private void checkWeight(int weight) {
+        if (weight < MIN_WEIGHT && weight > MAX_WEIGHT) {
+            throw new RuntimeException("Weight is invalid");
         }
-        return price;
     }
-
-
-
-
 
 
     public int getWeight() {
@@ -49,6 +51,9 @@ public class Car {
     }
 
     public void setWeight(int weight) {
+        if (weight > MIN_WEIGHT && weight < MAX_WEIGHT) {
+            throw new RuntimeException("Weight is invalid");
+        }
         this.weight = weight;
     }
 
@@ -60,11 +65,20 @@ public class Car {
         this.price = price;
     }
 
-    public ColorSet getColor() {
+    public Manufacturer getManufacturer() {
+        return manufacturer;
+    }
+
+    public void setManufacturer(Manufacturer manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public Color getColor() {
         return color;
     }
 
-    public void setColor(ColorSet color) {
+    public void setColor(Color color) {
         this.color = color;
     }
 }
+
