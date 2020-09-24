@@ -58,7 +58,7 @@ public class Warehouse{
     public void printReport(){
         System.out.println("Warehouse balance " + this.balance + " " +
                 " Quantity in the warehouse are " + getCarsCount());
-        
+
     }
 
 
