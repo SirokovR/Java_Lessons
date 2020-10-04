@@ -1,6 +1,11 @@
 package lesson6.classWork;
 
-public class Triangle {
+import lesson7.classWork.Figure;
+import model.Shape;
+import model.WithPerimetr;
+import model.WithSquare;
+
+public class Triangle implements Shape {
     private Point a;
     private Point b;
     private Point c;
@@ -18,7 +23,13 @@ public class Triangle {
     }
 
 
+    public void triangleMethod(){
+        System.out.println(" From triangle");
+    }
 
+
+
+    @Override
     public double getPerimetr(){
         double perimetr = getDistance(this.a,this.b) +
                 getDistance(this.b,this.c) +
@@ -69,5 +80,16 @@ public class Triangle {
     public void setC(Point c) {
         checkSides(this.a,this.b,c);
         this.c = c;
+    }
+
+
+    @Override
+    public String getName() {
+        return "Triangle";
+    }
+
+    @Override
+    public double getSquare() {
+        return (getDistance(this.b, this.c) * getDistance(this.a, this.c))/2;
     }
 }//class

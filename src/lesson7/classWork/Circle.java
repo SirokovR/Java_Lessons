@@ -1,6 +1,8 @@
 package lesson7.classWork;
 
-public class Circle extends Figure{
+import model.Shape;
+
+public class Circle  implements Shape {
     private int radius;
 
     public Circle(int radius){
@@ -8,9 +10,18 @@ public class Circle extends Figure{
     }
 
 
+
+
     @Override
-    public int getPerimeter(){
-        return (int)(2*Math.PI *radius);
+    public double getSquare() {return (int) (Math.PI*(radius*radius));}
+
+    @Override
+    public String getName() {
+        return "Circle";
     }
 
+    @Override
+    public double getPerimetr() {
+        return (int)(2*Math.PI *radius);
+    }
 }

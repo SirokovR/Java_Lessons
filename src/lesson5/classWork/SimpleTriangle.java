@@ -55,4 +55,14 @@ public class SimpleTriangle extends Figure {
     public int getPerimetr() {
         return this.a + this.b + this.c;
     }
+
+    @Override
+    public int getSquare() {
+        return (a*b)/2;
+    }
+
+    @Override
+    public int getPerimeter() {
+        return a+b+c;
+    }
 }

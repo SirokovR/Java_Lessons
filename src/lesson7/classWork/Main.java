@@ -17,7 +17,12 @@ public class Main {
         Square square3 = new Square(5);
 
 
-        Figure [] figures = {circle1,circle2,circle3,triangle1,triangle2,triangle3,square1,square2,square3};
+
+
+
+
+
+       /* Figure [] figures = {circle1,circle2,circle3,triangle1,triangle2,triangle3,square1,square2,square3};
         Figure figureMaxPerimeter = figures[0];
         for (Figure figure : figures) {
             if (figure.getPerimeter() > figureMaxPerimeter.getPerimeter()) {
@@ -70,6 +75,28 @@ public class Main {
         }else{
 
         }
+//*/
+//
+//        Figure [] figures = {circle1,circle2,circle3,triangle1,triangle2,triangle3,square1,square2,square3};
+//        Figure figureMaxSquare = figures[0];
+//        for (Figure figure : figures) {
+//            if (figure.getSquare() > figureMaxSquare.getSquare()) {
+//                figureMaxSquare = figure;
+//            }
+//        }
+//        System.out.println(figureMaxSquare);
+//        if(figureMaxSquare instanceof Circle){
+//            System.out.println("Circle");
+//        }else if(figureMaxSquare instanceof SimpleTriangle){
+//            System.out.println("Triangle");
+//        }else if(figureMaxSquare instanceof Square){
+//            System.out.println("Square");
+//
+//        }
+
+
+
+
 
 
     }//main

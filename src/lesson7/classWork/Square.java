@@ -1,6 +1,8 @@
 package lesson7.classWork;
 
-public class Square extends Figure {
+import model.Shape;
+
+public class Square implements Shape {
     private int a;
 
     public Square(int a) {
@@ -9,6 +11,21 @@ public class Square extends Figure {
 
     public  int getPerimeter(){
         return  4 * a;
+    }
 
+    @Override
+    public double getSquare() {
+        return a*a;
+    }
+
+    @Override
+    public String getName() {
+        return "String";
+    }
+
+    @Override
+    public double getPerimetr() {
+        return a*a;
     }
 }
+
