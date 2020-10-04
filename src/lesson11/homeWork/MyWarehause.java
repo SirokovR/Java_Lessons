@@ -1,6 +1,13 @@
 package lesson11.homeWork;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MyWarehause implements BusinessManagerAccessor, InterfaceWarehouse {
+
+
+
+    ArrayList<AbstractVehicular> warehouseCapacity = new ArrayList<>(9);
 
 
     @Override
