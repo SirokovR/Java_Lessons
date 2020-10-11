@@ -1,4 +1,4 @@
-package lesson11.homeEasy;
+package lesson11.home;
 
 public enum CarsManufacturers {
     Honda("Honda"),

@@ -1,5 +1,9 @@
 package model;
 
+import exseption.MyExseption;
+
+import java.io.IOException;
+
 public class SubClass extends AbstractParent{
 
 
@@ -27,5 +31,10 @@ public class SubClass extends AbstractParent{
         return  null;
     }
 
+    @Override
+    void exceptionExample() throws IOException {
+        throw new IOException(" ");
+    }
 
+///при оверайде кидает только такой же или болеее конктретный
 }

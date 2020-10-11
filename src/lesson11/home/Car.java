@@ -1,27 +1,26 @@
-package lesson11.homeEasy;
+package lesson11.home;
 
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 import static utilities.RandomUtils.getRandomFromRange;
 
-public class Truck extends Car implements IsVehicle {
-
+public abstract class Car implements InterfaceVehicle {
     private GregorianCalendar yearOfProduction;
     private int technicalCondition;
     private CarsManufacturers carsManufacturers;
-    private int carryingCapacity;
 
-
-    public Truck(GregorianCalendar yearOfProduction) {
-
+    public Car(GregorianCalendar yearOfProduction) {
         this.yearOfProduction = yearOfProduction;
         this.technicalCondition = getRandomFromRange(TECHNICAL_CONDITION_MIN, TECHNICAL_CONDITION_MAX);
         this.carsManufacturers = CarsManufacturers.values()[getRandomFromRange(0, CarsManufacturers.values().length - 1)];
-        this.carryingCapacity = getRandomFromRange(LOAD_CAPACITY_MIN, LOAD_CAPACITY_MAX);
-
-
     }
 
+
+    public int carAgeCalculation(Car car){
+        Calendar temp = car.getYearOfProduction();
+        return temp.get(GregorianCalendar.YEAR);
+    }
 
     public GregorianCalendar getYearOfProduction() {
         return yearOfProduction;
@@ -45,13 +44,5 @@ public class Truck extends Car implements IsVehicle {
 
     public void setCarsManufacturers(CarsManufacturers carsManufacturers) {
         this.carsManufacturers = carsManufacturers;
-    }
-
-    public int getCarryingCapacity() {
-        return carryingCapacity;
-    }
-
-    public void setCarryingCapacity(int carryingCapacity) {
-        this.carryingCapacity = carryingCapacity;
     }
 }

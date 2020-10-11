@@ -18,5 +18,7 @@ public  abstract class AbstractParent {
         return  null;
     }
 
+    abstract void exceptionExample() throws Exception;
+
 
 }
